@@ -2,7 +2,7 @@
     "title": "Test StoryRAMP",
     "introSlide": {
         "logo": {
-            "src": "https://raw.githubusercontent.com/ramp4-pcar4/ramp4-pcar4/master/assets/logo.svg",
+            "src": "00000000-0000-0000-0000-000000000000/assets/en/logo.svg",
             "altText": "Logo"
         },
         "title": "Test StoryRAMP",
@@ -30,12 +30,75 @@
             ]
         },
         {
+            "title": "Interactive Image",
+            "panel": [
+                {
+                    "type": "interactive-image",
+                    "title": "Interactive Image test",
+                    "defaultImage": {
+                        "id": "default",
+                        "src": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg"
+                    },
+                    "images": [
+                        {
+                            "id": "image-1",
+                            "src": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-516166467__1554821531978__w1920.jpg"
+                        }
+                    ],
+                    "panels": [
+                        {
+                            "id": "panel-1",
+                            "panel": {
+                                "title": "Hello World",
+                                "content": "I am a text panel. I am a child of the dynamic panel config. ![](00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg)",
+                                "type": "text",
+                                "cssClasses": "textPanelOutline"
+                            }
+                        },
+                        {
+                            "id": "panel-2",
+                            "panel": {
+                                "src": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg",
+                                "type": "image"
+                            }
+                        },
+                        {
+                            "id": "panel-3",
+                            "panel": {
+                                "type": "text",
+                                "title": "MORE STUFF",
+                                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus, magna in pulvinar tincidunt, magna velit feugiat sem, nec rhoncus lectus tortor quis turpis. Vivamus erat velit, feugiat at nisl lacinia, pulvinar tempus nunc. Nulla suscipit vulputate dapibus. Fusce tincidunt neque nunc, sed porta lacus elementum vitae. Suspendisse imperdiet interdum ipsum, id aliquet lectus aliquet sit amet. Aliquam erat volutpat. Nulla convallis nisl sodales nunc ullamcorper pulvinar. Nulla ornare justo id sapien porta gravida. Cras condimentum, felis id pretium malesuada, lorem lorem viverra nisi, sit amet molestie mi nulla nec velit. Integer semper lorem scelerisque tellus iaculis finibus. Aliquam efficitur sodales elit nec sodales. Sed vitae ipsum quis eros vulputate luctus."
+                            }
+                        }
+                    ],
+                    "zones": [
+                        {
+                            "panelId": "panel-2",
+                            "top": "5%",
+                            "left": "5%",
+                            "width": "25%",
+                            "height": "25%"
+                        },
+                        {
+                            "panelId": "panel-3",
+                            "imageId": "image-1",
+                            "top": "20%",
+                            "left": "80%",
+                            "width": "10%",
+                            "height": "50%"
+                        }
+                    ]
+                }
+            ],
+            "includeInToc": false
+        },
+        {
             "title": "Community Directory PowerBI Map",
             "panel": [
                 {
                     "config": "00000000-0000-0000-0000-000000000000/ramp-config/CommunityDirectory.json",
                     "type": "map",
-                    "teleportGrid": "left",
+                    "teleportGrid": "right",
                     "scrollguard": true
                 }
             ],
@@ -93,13 +156,86 @@
             "includeInToc": false
         },
         {
-            "title": "Default RAMP4 Sample",
-            "backgroundImage": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg",
+            "title": "Interactive Map - Overlap",
             "panel": [
                 {
-                    "config": "00000000-0000-0000-0000-000000000000/ramp-config/test-ramp4.json",
-                    "type": "map",
-                    "scrollguard": true
+                    "config": "00000000-0000-0000-0000-000000000000/ramp-config/OilSandsFacilityLocations2019.json",
+                    "type": "interactive-map",
+                    "scrollguard": true,
+                    "title": "Map Title Test",
+                    "points": [
+                        {
+                            "title": "Point of Interest A",
+                            "text": "This is a test point of interest. This is *a test* to make sure **markdown** works. Below is a link to Google.<br /><br /><a href='https://google.ca/'>Link to Google</a>",
+                            "image": "00000000-0000-0000-0000-000000000000/assets/en/NPRIpictogramme-2016data-EN__1553797637582__w1430.jpg",
+                            "altText": "An image.",
+                            "target": {
+                                "layerId": "OilSandsFacilityLocations2019",
+                                "oid": 12
+                            }
+                        },
+                        {
+                            "title": "Point of Interest B",
+                            "text": "This is another point of interest. This one does not include an image.",
+                            "target": {
+                                "layerId": "OilSandsFacilityLocations2019",
+                                "oid": 1
+                            }
+                        },
+                        {
+                            "title": "Point of Interest C",
+                            "text": "This is a third point of interest. This one includes an image, but also has a ton of text. Maecenas quis ipsum eleifend, finibus erat ut, finibus eros. Pellentesque facilisis iaculis nunc ut luctus. Curabitur luctus pulvinar nulla, id viverra orci viverra id. Nulla eget eleifend est. Maecenas quis ipsum eleifend, finibus erat ut, finibus eros. Pellentesque facilisis iaculis nunc ut luctus. Curabitur luctus pulvinar nulla, id viverra orci viverra id. Nulla eget eleifend est. Maecenas quis ipsum eleifend, finibus erat ut, finibus eros. Pellentesque facilisis iaculis nunc ut luctus. Curabitur luctus pulvinar nulla, id viverra orci viverra id. Nulla eget eleifend est. Maecenas quis ipsum eleifend, finibus erat ut, finibus eros. Pellentesque facilisis iaculis nunc ut luctus. Curabitur luctus pulvinar nulla, id viverra orci viverra id. Nulla eget eleifend est.",
+                            "altText": "Another image.",
+                            "image": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg",
+                            "target": {
+                                "layerId": "OilSandsFacilityLocations2019",
+                                "oid": 5
+                            }
+                        },
+                        {
+                            "image": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg",
+                            "altText": "A third image.",
+                            "target": {
+                                "layerId": "OilSandsFacilityLocations2019",
+                                "oid": 6
+                            }
+                        }
+                    ]
+                }
+            ],
+            "includeInToc": false
+        },
+        {
+            "title": "Default RAMP4 Sample",
+            "panel": [
+                {
+                    "type": "slideshow",
+                    "items": [
+                        {
+                            "config": "00000000-0000-0000-0000-000000000000/ramp-config/test-ramp4.json",
+                            "type": "map",
+                            "scrollguard": true,
+                            "caption": "I am a map with a caption."
+                        },
+                        {
+                            "config": "00000000-0000-0000-0000-000000000000/ramp-config/test-ramp4.json",
+                            "type": "map",
+                            "scrollguard": true,
+                            "title": "I am a map with a title."
+                        },
+                        {
+                            "config": "00000000-0000-0000-0000-000000000000/ramp-config/test-ramp4.json",
+                            "type": "map",
+                            "scrollguard": true,
+                            "title": "I have a title...",
+                            "caption": "... and a caption."
+                        },
+                        {
+                            "config": "00000000-0000-0000-0000-000000000000/ramp-config/test-ramp4.json",
+                            "type": "map",
+                            "scrollguard": true
+                        }
+                    ]
                 },
                 {
                     "title": "RAMP4 Test",
@@ -143,7 +279,8 @@
                                 "items": [
                                     {
                                         "type": "chart",
-                                        "src": "00000000-0000-0000-0000-000000000000/charts/en/chartConfig.json"
+                                        "src": "00000000-0000-0000-0000-000000000000/charts/en/chartConfig.json",
+                                        "caption": "caption for a chart"
                                     },
                                     {
                                         "type": "chart",
@@ -152,7 +289,8 @@
                                             "title": "Selenium releases and disposals in 2019",
                                             "subtitle": "",
                                             "type": "pie"
-                                        }
+                                        },
+                                        "caption": "caption for another chart"
                                     }
                                 ]
                             }
@@ -410,6 +548,10 @@
                     "timeSlider": {
                         "range": [2010, 2019],
                         "start": [2010, 2010],
+                        "animation": {
+                            "playMode": "append",
+                            "interval": 500
+                        },
                         "attribute": "Reporting_Year___Année"
                     },
                     "type": "map"
@@ -460,7 +602,8 @@
                     "items": [
                         {
                             "type": "chart",
-                            "src": "00000000-0000-0000-0000-000000000000/charts/en/chartConfig.json"
+                            "src": "00000000-0000-0000-0000-000000000000/charts/en/chartConfig.json",
+                            "caption": "Caption for first chart"
                         },
                         {
                             "type": "chart",
@@ -470,7 +613,8 @@
                                 "xAxisLabel": "Quantity (tonnes)",
                                 "subtitle": "",
                                 "type": "bar"
-                            }
+                            },
+                            "caption": "caption for second chart"
                         },
                         {
                             "type": "chart",
@@ -479,7 +623,8 @@
                                 "title": "Figure 1: Percentage of total ethylene glycol releases for 2019, by sector",
                                 "subtitle": "",
                                 "type": "pie"
-                            }
+                            },
+                            "caption": "caption for third chart"
                         }
                     ]
                 }
@@ -535,13 +680,110 @@
                 }
             ],
             "includeInToc": false
+        },
+        {
+            "title": "another chart slide",
+            "backgroundImage": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg",
+            "panel": [
+                {
+                    "type": "chart",
+                    "src": "00000000-0000-0000-0000-000000000000/charts/en/hybridChartConfig.json",
+                    "caption": "Caption for chart"
+                },
+                {
+                    "src": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-516166467__1554821531978__w1920.jpg",
+                    "type": "image"
+                }
+            ]
+        }
+    ],
+    "tableOfContents": [
+        {
+            "title": "Overview",
+            "slideIndex": 0,
+            "sublist": [
+                {
+                    "title": "Interactive Content + Maps",
+                    "slideIndex": 1
+                },
+                {
+                    "title": "Dynamic Panel",
+                    "slideIndex": 5
+                },
+                {
+                    "title": "YouTube Video",
+                    "slideIndex": 6
+                }
+            ]
+        },
+        {
+            "title": "Oil Sands Deposits",
+            "slideIndex": 8
+        },
+        {
+            "title": "In-situ Extraction",
+            "slideIndex": 10
+        },
+        {
+            "title": "Where are Facilities Located?",
+            "slideIndex": 11,
+            "sublist": [
+                {
+                    "title": "NPRI Substances Reported for Oil Sands Mining Faciltiies",
+                    "slideIndex": 12
+                },
+                {
+                    "title": "NPRI Substances Reported for Oil Sands Mining Facilities (2)",
+                    "slideIndex": 13
+                },
+                {
+                    "title": "Criteria Air Contaminant Releases From Oil Sands Mines",
+                    "slideIndex": 14
+                },
+                {
+                    "title": "Reported Mine Tailings From Oil Sands Surface Mining Facilities",
+                    "slideIndex": 15
+                },
+                {
+                    "title": "Reported Mine Tailings From Oil Sands Surface Mining Facilities (2)",
+                    "slideIndex": 16
+                },
+                {
+                    "title": "Trends in Mine Tailings Reported From Surface Mining Facilities",
+                    "slideIndex": 17
+                },
+                {
+                    "title": "Thermal in Situ Facilities",
+                    "slideIndex": 18
+                },
+                {
+                    "title": "NPRI Releases From Thermal in-situ Faciltiies",
+                    "slideIndex": 19
+                }
+            ]
+        },
+        {
+            "title": "Highcharts Demo (╯°□°)╯︵ ┻━┻",
+            "slideIndex": 20,
+            "sublist": [
+                {
+                    "title": "Dynamic Slideshow with Hybrid Chart",
+                    "slideIndex": 21
+                }
+            ]
+        },
+        {
+            "title": "Managing Environmental Impacts",
+            "slideIndex": 22
         }
     ],
     "tocOrientation": "horizontal",
+    "returnTop": false,
     "stylesheets": ["00000000-0000-0000-0000-000000000000/styles/main.css"],
     "contextLink": "https://www.canada.ca/en/environment-climate-change/services/national-pollutant-release-inventory/tools-resources-data/exploredata.html",
     "contextLabel": "Explore National Pollutant Release Inventory data",
     "lang": "en",
+    "lazyLoad": false,
     "breadcrumbs": [
         {
             "title": "Environment and natural resources",
