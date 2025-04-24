@@ -112,7 +112,6 @@
                     "type": "interactive-map",
                     "scrollguard": true,
                     "title": "Map Title Test",
-                    "teleportAOI": "right",
                     "points": [
                         {
                             "title": "Point of Interest A",
@@ -125,8 +124,8 @@
                             }
                         },
                         {
-                            "title": "Point of Interest B",
-                            "text": "This is another point of interest. This one does not include an image.",
+                            "title": "Did you know that many thousands of birds migrate to and from the Salish Sea each year?",
+                            "text": "The Salish Sea is an important area for many marine birds. Some spend the entire year here, but others are only temporary visitors. Scroll through this interactive map to follow the annual migration of a Glaucous-winged Gull. To make it easier to follow, we will call this bird “Frostwing”.<br/><br/><span class='font-bold text-xl'>The Journey Begins</span><br/><i>March 11 to March 19</i><br/>Frostwing begins its journey in the area near White Rock, BC. During this period, Frostwing stops by the area near Comox, BC most likely to take advantage of the rich food sources provided by spawning Pacific Herring.</p>",
                             "target": {
                                 "layerId": "OilSandsFacilityLocations2019",
                                 "oid": 1
@@ -156,52 +155,41 @@
             "includeInToc": false
         },
         {
-            "title": "Interactive Map - Overlap",
+            "title": "Scrolly Map Tests",
             "panel": [
                 {
-                    "config": "00000000-0000-0000-0000-000000000000/ramp-config/OilSandsFacilityLocations2019.json",
+                    "config": "00000000-0000-0000-0000-000000000000/ramp-config/WQMS-map-6.json",
                     "type": "interactive-map",
                     "scrollguard": true,
-                    "title": "Map Title Test",
+                    "title": "Scrolly Map Tests",
                     "points": [
                         {
                             "title": "Point of Interest A",
-                            "text": "This is a test point of interest. This is *a test* to make sure **markdown** works. Below is a link to Google.<br /><br /><a href='https://google.ca/'>Link to Google</a>",
-                            "image": "00000000-0000-0000-0000-000000000000/assets/en/NPRIpictogramme-2016data-EN__1553797637582__w1430.jpg",
-                            "altText": "An image.",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat felis purus, quis fringilla nunc porta eget. Morbi eu ligula mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur fringilla gravida arcu, congue pellentesque nisi fringilla quis. Mauris ac placerat diam. Maecenas tellus leo, sodales at turpis tristique, hendrerit malesuada mi. Aliquam lobortis quis enim et ultrices. Nam a neque mauris. Duis faucibus enim sed nisi dictum ullamcorper. Vivamus maximus sit amet quam ac congue. Nunc mattis et enim ut vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed risus metus, commodo in enim in, convallis vehicula enim. Fusce eget rhoncus mi. Donec nec dictum elit. Praesent dapibus nulla purus, eget dignissim metus consequat quis. Suspendisse ex velit, volutpat quis est eget, euismod suscipit dui. Vivamus accumsan dictum fringilla. Aliquam ex urna, gravida in molestie sit amet, varius eget est. In vel consectetur nunc.",
                             "target": {
-                                "layerId": "OilSandsFacilityLocations2019",
-                                "oid": 12
-                            }
+                                "returnHome": true
+                            },
+                            "hideLayers": ["Great Lakes"]
                         },
                         {
                             "title": "Point of Interest B",
-                            "text": "This is another point of interest. This one does not include an image.",
+                            "text": "Sed mollis quis magna at maximus. Fusce posuere lectus lacus, commodo fringilla elit placerat vitae. Integer sollicitudin lectus nec ligula maximus, vel volutpat augue fringilla. Donec commodo turpis odio, id tincidunt enim dignissim in. Donec eu ligula eu enim aliquam blandit sit amet sit amet odio. Ut sollicitudin, ligula sed convallis auctor, sapien enim eleifend urna, sed semper massa eros at velit. Morbi eu velit eget nisi convallis ornare ac et nisl. Vivamus eu pharetra mauris, quis efficitur nunc. Donec laoreet porta lectus, a faucibus ligula dictum volutpat. Etiam congue purus vitae ligula pulvinar, ut eleifend lorem ultricies. Donec semper sapien lorem, vitae pulvinar turpis volutpat in. Curabitur egestas lacus in efficitur condimentum. Sed consequat dui nec augue mollis iaculis. Pellentesque id aliquet mauris.",
                             "target": {
-                                "layerId": "OilSandsFacilityLocations2019",
-                                "oid": 1
+                                "returnHome": true
                             }
                         },
                         {
                             "title": "Point of Interest C",
-                            "text": "This is a third point of interest. This one includes an image, but also has a ton of text. Maecenas quis ipsum eleifend, finibus erat ut, finibus eros. Pellentesque facilisis iaculis nunc ut luctus. Curabitur luctus pulvinar nulla, id viverra orci viverra id. Nulla eget eleifend est. Maecenas quis ipsum eleifend, finibus erat ut, finibus eros. Pellentesque facilisis iaculis nunc ut luctus. Curabitur luctus pulvinar nulla, id viverra orci viverra id. Nulla eget eleifend est. Maecenas quis ipsum eleifend, finibus erat ut, finibus eros. Pellentesque facilisis iaculis nunc ut luctus. Curabitur luctus pulvinar nulla, id viverra orci viverra id. Nulla eget eleifend est. Maecenas quis ipsum eleifend, finibus erat ut, finibus eros. Pellentesque facilisis iaculis nunc ut luctus. Curabitur luctus pulvinar nulla, id viverra orci viverra id. Nulla eget eleifend est.",
-                            "altText": "Another image.",
-                            "image": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg",
+                            "text": "Integer euismod nunc et justo fermentum elementum vitae quis sapien. Vivamus at egestas libero, eget malesuada nunc. Aenean vel lacus non enim iaculis mollis id sed elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris efficitur leo ac dolor suscipit, a ultrices mi iaculis. Maecenas sollicitudin odio eu leo euismod mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam faucibus magna felis, ac volutpat nisl ornare et. Aenean eget maximus libero, sit amet cursus lacus. Quisque est mi, interdum quis lorem et, tincidunt posuere erat. Nullam et dui ac ligula tristique ullamcorper nec varius mauris. Curabitur bibendum fermentum purus, vulputate accumsan nunc cursus bibendum. Maecenas blandit justo ac ante pretium, eget commodo est suscipit. Vestibulum placerat laoreet velit, nec vulputate nisl fermentum a.",
                             "target": {
-                                "layerId": "OilSandsFacilityLocations2019",
-                                "oid": 5
-                            }
-                        },
-                        {
-                            "image": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-187242601__1554821467033__w1920.jpg",
-                            "altText": "A third image.",
-                            "target": {
-                                "layerId": "OilSandsFacilityLocations2019",
-                                "oid": 6
-                            }
+                                "layerId": "Tributary Sites",
+                                "oid": 7
+                            },
+                            "hideLayers": ["Great Lakes", "Great Lakes Subbasins"]
                         }
-                    ]
-                }
+                    ],
+                    "duration": 2000
+                }   
             ],
             "includeInToc": false
         },
@@ -248,6 +236,7 @@
         {
             "title": "Dynamic Panel Test",
             "backgroundImage": "00000000-0000-0000-0000-000000000000/assets/en/GettyImages-516166467__1554821531978__w1920.jpg",
+            "backgroundAltText": "Background image for dynamic panel",
             "panel": [
                 {
                     "title": "This Slide Is Dynamic!",
@@ -319,7 +308,8 @@
                                 "title": "Overtime job",
                                 "videoType": "external",
                                 "caption": "00000000-0000-0000-0000-000000000000/assets/en/video1-en.mp4.vtt",
-                                "src": "https://wet-boew.github.io/wet-boew-attachments/videos/video1-en.mp4"
+                                "src": "https://wet-boew.github.io/wet-boew-attachments/videos/video1-en.mp4",
+                                "autoplay": true
                             }
                         },
                         {
@@ -361,11 +351,13 @@
             "panel": [
                 {
                     "type": "video",
-                    "title": "What are cumulative effects?",
-                    "videoType": "YouTube",
-                    "src": "https://www.youtube.com/embed/4kTq-hnrMHI",
-                    "width": "60%",
-                    "transcript": "00000000-0000-0000-0000-000000000000/assets/en/cumulative-effects.md"
+                    "title": "Overtime job",
+                    "videoType": "local",
+                    "src": "00000000-0000-0000-0000-000000000000/assets/en/video1-en.mp4",
+                    "caption": "00000000-0000-0000-0000-000000000000/assets/en/video1-en.mp4.vtt",
+                    "transcript": "00000000-0000-0000-0000-000000000000/assets/en/cpts-lg-en.html",
+                    "width": "85%",
+                    "autoplay": true
                 }
             ],
             "includeInToc": false
@@ -697,94 +689,13 @@
             ]
         }
     ],
-    "tableOfContents": [
-        {
-            "title": "Overview",
-            "slideIndex": 0,
-            "sublist": [
-                {
-                    "title": "Interactive Content + Maps",
-                    "slideIndex": 1
-                },
-                {
-                    "title": "Dynamic Panel",
-                    "slideIndex": 5
-                },
-                {
-                    "title": "YouTube Video",
-                    "slideIndex": 6
-                }
-            ]
-        },
-        {
-            "title": "Oil Sands Deposits",
-            "slideIndex": 8
-        },
-        {
-            "title": "In-situ Extraction",
-            "slideIndex": 10
-        },
-        {
-            "title": "Where are Facilities Located?",
-            "slideIndex": 11,
-            "sublist": [
-                {
-                    "title": "NPRI Substances Reported for Oil Sands Mining Faciltiies",
-                    "slideIndex": 12
-                },
-                {
-                    "title": "NPRI Substances Reported for Oil Sands Mining Facilities (2)",
-                    "slideIndex": 13
-                },
-                {
-                    "title": "Criteria Air Contaminant Releases From Oil Sands Mines",
-                    "slideIndex": 14
-                },
-                {
-                    "title": "Reported Mine Tailings From Oil Sands Surface Mining Facilities",
-                    "slideIndex": 15
-                },
-                {
-                    "title": "Reported Mine Tailings From Oil Sands Surface Mining Facilities (2)",
-                    "slideIndex": 16
-                },
-                {
-                    "title": "Trends in Mine Tailings Reported From Surface Mining Facilities",
-                    "slideIndex": 17
-                },
-                {
-                    "title": "Thermal in Situ Facilities",
-                    "slideIndex": 18
-                },
-                {
-                    "title": "NPRI Releases From Thermal in-situ Faciltiies",
-                    "slideIndex": 19
-                }
-            ]
-        },
-        {
-            "title": "Highcharts Demo (╯°□°)╯︵ ┻━┻",
-            "slideIndex": 20,
-            "sublist": [
-                {
-                    "title": "Dynamic Slideshow with Hybrid Chart",
-                    "slideIndex": 21
-                }
-            ]
-        },
-        {
-            "title": "Managing Environmental Impacts",
-            "slideIndex": 22
-        }
-    ],
-    "tocOrientation": "horizontal",
-    "returnTop": false,
+    "tocOrientation": "vertical",
     "stylesheets": ["00000000-0000-0000-0000-000000000000/styles/main.css"],
     "contextLink": "https://www.canada.ca/en/environment-climate-change/services/national-pollutant-release-inventory/tools-resources-data/exploredata.html",
     "contextLabel": "Explore National Pollutant Release Inventory data",
     "lang": "en",
     "lazyLoad": false,
-    "breadcrumbs": [
+    "breadcrumbs": [    
         {
             "title": "Environment and natural resources",
             "href": "https://www.canada.ca/en/services/environment.html"
