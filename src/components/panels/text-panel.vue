@@ -19,6 +19,7 @@ import type { TextPanel } from '@storylines/definitions';
 
 import MarkdownIt from 'markdown-it';
 import Scrollama from './helpers/scrollama.vue';
+import DOMPurify from 'dompurify';
 
 const TextContent = defineAsyncComponent(() => import('./helpers/text-content.vue'));
 
@@ -39,8 +40,15 @@ onMounted((): void => {
     mdContent.value = md
         .render(props.config.content)
         .replace(/<table/g, '<div class="table-container"><table')
-        .replace(/<\/table>/g, '</table></div>');
+        .replace(/<\/table>/g, '</table></div>')
+        .replace(/<form>/g, '&lt;form&gt;')
+        .replace(/<\/form>/g, '&lt;/form&gt;');
 
+    mdContent.value = DOMPurify.sanitize(mdContent.value, {
+        ADD_TAGS: ['AudioPlayer'],
+        ADD_ATTR: ['transcript']
+    }).replaceAll('audioplayer', 'AudioPlayer');
+    console.log(DOMPurify.removed);
     document
         .querySelectorAll('.storyramp-app a:not([target])')
         .forEach((el: Element) => ((el as HTMLAnchorElement).target = '_blank'));
